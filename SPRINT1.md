@@ -91,4 +91,5 @@ For Sprint 1:
 
 ## 6. Sprint 1 Demo
 
-At the end of two weeks, we will show an end-to-end system that loads and visualizes heart-rate data from the selected dataset and collects, saves, and visualizes raw PPG measurements from our initial hardware prototype.
+At the end of two weeks, we will determine system requirements, architecture, and procure components. We will also load, process, and visualize raw heart rate data from the UC Irvine dataset. 
+
