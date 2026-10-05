@@ -1,0 +1,57 @@
+# BU Faculty Contacts — MHRS (Multispectral Heart Rate Sensor)
+
+## 1. Chen Yang, PhD
+**Professor (ECE, Chemistry, MSE); Associate Chair of Master's Programs, ECE**
+
+**Summary:** Leads the Yang Research Group, which builds photoacoustic devices (light pulses converted into localized ultrasound) for non-genetic neural stimulation. The work spans nanomaterials, optical fibers, and lasers, and includes flexible, potentially wearable photoacoustic devices.
+
+**Relevance to MHRS:** Photoacoustics and PPG both depend on how tissue and blood absorb light at different wavelengths. Her group's experience with optical absorption in tissue and miniaturized optical devices is relevant to the multispectral (green/IR/yellow) design. As Associate Chair of Master's Programs, she is also a natural first contact for a master's-level project.
+
+**Contact:**
+- Email: cheyang@bu.edu
+- Phone: (617) 358-4837
+- Office: PHO 829, 8 St. Mary's St, Boston, MA 02215
+- Lab: https://sites.bu.edu/yanglab
+
+---
+
+## 2. Lei Tian, PhD
+**Associate Professor (ECE, BME); Director, Computational Imaging Systems Lab**
+
+**Summary:** Develops computational optical imaging, where optical hardware and algorithms are designed together. Research areas include imaging through scattering/complex media, biomedical imaging, neurophotonics, and machine learning for biomedical optics.
+
+**Relevance to MHRS:** Wrist PPG is a weak optical signal measured through highly scattering tissue and corrupted by motion. His hardware/algorithm co-design approach applies directly to combining the multispectral array, blind-photodiode subtraction, and IMU data into a robust heart rate estimate. He also has expertise in modeling light propagation in tissue.
+
+**Contact:**
+- Email: leitian@bu.edu
+- Phone: (617) 353-1334
+- Office: PHO 830, 8 St. Mary's St, Boston, MA 02215
+- Lab: Computational Imaging Systems Lab (linked from BU ENG profile)
+
+---
+
+## 3. Darren Roblyer, PhD
+**Professor (BME, ECE affiliate); Associate Chair for Graduate Studies, BME; Director, Biomedical Optical Technologies Lab (BOTLab)**
+
+**Summary:** Works on translational diffuse optical spectroscopy and imaging using near-infrared light. His lab builds wearable optical probes, including a wearable probe for cuffless blood pressure using speckle contrast optical spectroscopy (SCOS), a wearable SWIR hydration probe, and flexible probes for monitoring breast cancer treatment.
+
+**Relevance to MHRS:** Probably the closest match to the project. His lab has iterated on wearable LED/photodiode probes, from early rigid single-source designs to flexible arrays. That experience covers optical coupling, probe geometry, ambient-light rejection, and continuous monitoring of microvascular blood flow during daily activity, which maps onto your housing/geometry and motion-robustness goals.
+
+**Contact:**
+- Email: roblyer@bu.edu
+- Lab: https://www.bu.edu/botlab
+
+---
+
+## 4. Rabia Tugce Yazicigil, PhD
+**Associate Professor (ECE, BME); Director, WISE Circuits Group**
+
+**Summary:** Designs low-power integrated circuits and systems for wireless and biomedical sensing, including CMOS photodiode readout electronics for miniaturized (e.g., ingestible) biosensors.
+
+**Relevance to MHRS:** Low-noise, low-power photodiode front ends are central to a battery-powered wrist sensor. Her expertise applies to analog front-end design, SNR, and power budgeting for a multi-LED, multi-photodiode array with a blind reference channel.
+
+**Contact:**
+- Email: rty@bu.edu
+- Phone: (617) 353-2815
+- Office: Room 329, 8 St. Mary's St, Boston, MA 02215
+- Lab: https://wisecircuits.bu.edu
