@@ -1,0 +1,37 @@
+# AI Review Log: MHRS Project
+
+**Project:** Multispectral Heart Rate Sensor (MHRS), a 12-week master's product design course
+**Reviewers:** AI 1 (Claude), AI 2 (second assistant), AI 3 (third assistant, reviewing AI 1's critique)
+**Prompts:** (1) Riskiest unstated assumption? (2) Why might this fail by week 6? (3) What's missing from our evaluation? Then cross-review of each other's responses.
+
+**Claude Chat Link:** https://claude.ai/share/97034b81-99c5-42db-a9d8-8f486e973ad6
+
+**Gemini Chat Link:** https://share.google/aimode/8fMC8KD6THpMR0cpr
+
+## Where they agreed (likely real problems)
+
+- **Scope is too broad.** All three flagged that five parallel interventions won't fit in 12 weeks, and that hardware integration will consume the schedule before any testing happens.
+- **No ground truth.** All three called for an ECG chest-strap reference (e.g., Polar H10). Without it, accuracy can't be measured.
+- **No success metrics.** Error metrics (MAE/RMSE in bpm, dropout rate) need to be defined before data collection.
+- **Interventions need prioritizing.** AI 2 framed this as a "component hierarchy," and AI 1 adopted it: rank interventions by expected payoff versus build cost before starting.
+- **Hardware-specific risks (AI 1, endorsed by AI 3).** The ESP32-S3's internal ADC is too noisy for small-signal analog PPG. IMU and PPG streams must be tightly time-synchronized. A yellow-wavelength emitter requires custom analog design.
+- **Wearable geometry is undervalued.** AI 1 and AI 3 agreed that sensor-skin coupling is likely the largest lever and should move from last priority to first.
+
+## Where they disagreed, and our decision
+
+| Issue | Positions | Our decision and reasoning |
+|---|---|---|
+| **Riskiest assumption** | AI 1: that motion artifact is an optical problem more channels can fix (physics risk). AI 2: that the team can fuse many data streams (execution risk). | **AI 1.** Execution risk is already covered by the week-6 question. The physics assumption can sink the project even with perfect execution. |
+| **Ablation testing** | AI 1: test each intervention alone and combined, algorithm held fixed. AI 3: a full matrix (32 permutations) is impractical in 12 weeks. | **Partial ablation.** AI 3 is right about five variables, but with scope cut to two interventions, a 2×2 design is only four conditions. That's feasible, and it's the only way to attribute any improvement to a specific change. |
+| **Survey vs. focused experiment** | AI 1: narrow to a focused, controlled study. AI 3: exploring parallel paths is valid for a design course. | **Focused, with a light exploratory element.** A proof-of-concept still needs a defensible quantitative result. Untested branches can appear as future work. |
+| **Severity of week-6 risk** | AI 2: "highly likely to fail." AI 1: likely to fail *as scoped*. | **AI 1.** The risk is conditional on scope, which is within our control. |
+| **Value of multispectral PPG** | AI 1 initially discounted it, then conceded that wavelength differences can help separate motion from pulse. | **Keep green/IR from the existing module; drop yellow.** The benefit is real, but a custom emitter costs more time than we have. |
+
+## The one change we made
+
+**We narrowed MHRS from five interventions to two, measured against an ECG chest-strap reference:**
+
+1. **Mechanical:** wearable geometry and strap design (multiple 3D-printed housing iterations)
+2. **Digital:** IMU-referenced motion filtering using the digital PPG sensor
+
+Multispectral (yellow), optical filters, and blind-photodiode subtraction move to stretch goals or future work. We'll lock hardware by week 5 and use weeks 6–10 for a controlled 2×2 study under a fixed motion protocol.
